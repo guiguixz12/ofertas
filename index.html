@@ -672,6 +672,40 @@
       white-space: nowrap;
     }
 
+    /* ─── BONUS BOX ─── */
+    .bonus-box {
+      margin-top: 18px;
+      border: 2px dashed var(--gold);
+      border-radius: 14px;
+      padding: 20px 18px;
+      background: #fffbf0;
+      text-align: left;
+    }
+    .bonus-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      border-radius: 100px;
+      padding: 4px 11px;
+      margin-bottom: 12px;
+    }
+    .bonus-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .bonus-ico { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+    .bonus-title {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+    .bonus-desc { font-size: .84rem; color: #555; margin: 0; line-height: 1.65; }
+
     /* ─── RESPONSIVE ─── */
     @media (min-width: 600px) {
       .tgrid { display: grid; grid-template-columns: repeat(3,1fr); }
@@ -979,6 +1013,19 @@
         </div>
       </div>
     </div>
+
+    <!-- BONUS -->
+    <div class="bonus-box">
+      <div class="bonus-tag">BONO INCLUIDO</div>
+      <div class="bonus-inner">
+        <div class="bonus-ico">🛒</div>
+        <div>
+          <div class="bonus-title">Lista de la compra para Mercadona</div>
+          <p class="bonus-desc">Todos los ingredientes del recetario organizados en una lista lista para llevar al Mercadona. Sin gluten oculto, sin productos raros — solo lo que encuentras en cualquier tienda y ya sabes que es seguro.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1077,6 +1124,7 @@
         <li><span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Gluten oculto revisado en todos los ingredientes</li>
         <li><span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Acceso de por vida · pago único · sin suscripción</li>
         <li><span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>PDF imprimible y optimizado para móvil</li>
+        <li><span class="ck" style="background:var(--gold)"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>BONO: Lista de la compra para Mercadona</strong></li>
       </ul>
 
       <a href="https://hotmart.com" class="btn" id="cta-precio">Quiero mis 50 recetas ahora →</a>
