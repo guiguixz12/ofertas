@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar</title>
-  <meta name="description" content="50 recetas testadas y comprobadas para que tu hijo coma sin gluten sin drama. Desayunos, meriendas, comidas, lonchera y postres." />
+  <meta name="description" content="50 recetas testadas y comprobadas para que tu hijo coma sin gluten sin drama." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,14 +13,13 @@
 
     :root {
       --accent: #C7623B;
-      --accent-dark: #a8502e;
-      --gold: #D9A441;
-      --text: #1c1c1c;
-      --muted: #666;
-      --light: #f7f7f7;
-      --border: #e8e8e8;
-      --white: #ffffff;
-      --w: 600px;
+      --accent-h: #a8502e;
+      --gold:   #D9A441;
+      --text:   #1a1a1a;
+      --muted:  #6b6b6b;
+      --light:  #f5f5f5;
+      --border: #e4e4e4;
+      --w: 580px;
     }
 
     html { scroll-behavior: smooth; }
@@ -30,328 +29,332 @@
       font-size: 15px;
       line-height: 1.65;
       color: var(--text);
-      background: var(--white);
+      background: #fff;
       -webkit-font-smoothing: antialiased;
+      /* space for sticky bar */
+      padding-bottom: 76px;
     }
 
-    h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.25; }
+    h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.28; }
 
-    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 20px; }
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 18px; }
 
-    /* ── TOP BAR ── */
-    #topbar {
-      background: var(--text);
-      color: rgba(255,255,255,.88);
-      font-size: .72rem;
+    /* ─── ANNOUNCEMENT BAR ─── */
+    #bar {
+      background: #1a1a1a;
+      color: rgba(255,255,255,.82);
+      font-size: .71rem;
       font-weight: 500;
+      letter-spacing: .03em;
       text-align: center;
-      padding: 9px 20px;
-      letter-spacing: .02em;
+      padding: 9px 16px;
     }
 
-    /* ── PRODUCT SECTION ── */
-    #product {
-      padding: 0 0 48px;
-      background: var(--white);
+    /* ─── HERO IMAGE ─── */
+    #hero-img {
+      width: 100%;
+      background: #f0ece6;
     }
-
-    /* — Hero image — */
-    .hero-img {
+    #hero-img img {
       width: 100%;
       display: block;
-      margin-bottom: 32px;
-    }
-    .hero-img img {
-      width: 100%;
-      display: block;
-      max-height: 420px;
+      max-height: 460px;
       object-fit: cover;
-      object-position: center top;
+      object-position: center;
     }
 
-    /* — Book image (product) — */
-    .book-img {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
-    .book-img img {
-      width: 180px;
-      border-radius: 6px;
-      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    /* ─── PRODUCT INFO ─── */
+    #product {
+      padding: 28px 0 36px;
     }
 
-    /* — Rating — */
+    /* Rating */
     .rating-row {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .stars { color: var(--gold); font-size: .95rem; letter-spacing: .06em; }
-    .rating-text { font-size: .8rem; color: var(--muted); }
+    .stars { color: var(--gold); font-size: .92rem; letter-spacing: .05em; }
+    .rating-text { font-size: .78rem; color: var(--muted); }
 
-    /* — Title — */
+    /* Title */
     #product h1 {
-      font-size: clamp(1.45rem, 5vw, 2rem);
-      text-align: center;
-      margin-bottom: 22px;
+      font-size: clamp(1.45rem, 5.2vw, 2rem);
+      margin-bottom: 20px;
       color: var(--text);
     }
 
-    /* — Feature bullets — */
-    .feature-list {
-      list-style: none;
+    /* Feature tag pills — horizontal, wrapping */
+    .tags {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 24px;
     }
-    .feature-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: .88rem;
-      color: var(--text);
+    .tag {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      font-size: .73rem;
+      font-weight: 500;
+      color: var(--muted);
     }
-    .f-dot {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .f-dot svg { width: 10px; height: 10px; fill: #fff; }
 
-    /* — Price — */
-    .price-block {
-      text-align: center;
-      margin-bottom: 22px;
+    /* Separator */
+    .sep {
+      height: 1px;
+      background: var(--border);
+      margin: 22px 0;
     }
-    .price-inner {
-      display: inline-flex;
+
+    /* Price */
+    .price-wrap {
+      margin-bottom: 18px;
+    }
+    .price-row {
+      display: flex;
       align-items: baseline;
       gap: 10px;
       margin-bottom: 4px;
     }
     .p-old {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #bbb;
       text-decoration: line-through;
       font-weight: 500;
     }
     .p-now {
       font-family: 'Lora', serif;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--text);
       line-height: 1;
     }
-    .price-note {
-      font-size: .74rem;
+    .price-sub {
+      font-size: .73rem;
       color: var(--muted);
     }
 
-    /* — CTA — */
-    .btn-primary {
+    /* Bullets below price */
+    .price-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin: 16px 0 22px;
+    }
+    .price-perks li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: .84rem;
+      color: var(--text);
+    }
+    .ck {
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ck svg { width: 9px; height: 9px; }
+
+    /* CTA */
+    .btn {
       display: block;
       width: 100%;
-      padding: 17px 24px;
+      padding: 17px 22px;
       background: var(--accent);
       color: #fff;
       font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
+      font-size: .98rem;
       font-weight: 600;
       text-align: center;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 10px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 18px rgba(199,98,59,.3);
-      transition: background .18s;
-      letter-spacing: .01em;
-      margin-bottom: 12px;
+      box-shadow: 0 4px 16px rgba(199,98,59,.28);
+      transition: background .15s;
+      margin-bottom: 11px;
     }
-    .btn-primary:hover { background: var(--accent-dark); }
+    .btn:hover { background: var(--accent-h); }
 
-    .delivery-note {
+    .btn-note {
       text-align: center;
-      font-size: .74rem;
+      font-size: .72rem;
       color: var(--muted);
       margin-bottom: 18px;
     }
 
-    /* — Payment icons — */
-    .payment-row {
+    /* Payment icons */
+    .pay-row {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 6px 10px;
+      gap: 6px 8px;
+      padding-bottom: 6px;
     }
     .pay-chip {
       background: var(--light);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 10px;
-      font-size: .67rem;
-      font-weight: 600;
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-size: .64rem;
+      font-weight: 700;
       color: var(--muted);
-      letter-spacing: .06em;
+      letter-spacing: .05em;
       text-transform: uppercase;
     }
 
-    /* — Divider — */
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 36px 0;
-    }
-
-    /* — Social proof bar — */
-    .social-bar {
-      background: var(--light);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 16px;
+    /* Social proof bar */
+    .proof-bar {
       display: flex;
-      gap: 0;
-      margin-top: 32px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 24px;
     }
-    .sp-item {
+    .pb-item {
       flex: 1;
       text-align: center;
-      padding: 0 10px;
+      padding: 14px 8px;
+      border-right: 1px solid var(--border);
     }
-    .sp-item + .sp-item { border-left: 1px solid var(--border); }
-    .sp-n {
+    .pb-item:last-child { border-right: none; }
+    .pb-n {
       font-family: 'Lora', serif;
-      font-size: 1.55rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: var(--accent);
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
-    .sp-l { font-size: .68rem; color: var(--muted); line-height: 1.3; }
+    .pb-l { font-size: .63rem; color: var(--muted); line-height: 1.3; }
 
-    /* ── INCLUDED SECTION ── */
+    /* ─── BOOK IMAGE SECTION ─── */
+    #book-section {
+      padding: 36px 0;
+      background: var(--light);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    #book-section img {
+      width: 180px;
+      border-radius: 6px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.14);
+      margin-bottom: 18px;
+    }
+    #book-section h2 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+    #book-section p {
+      font-size: .82rem;
+      color: var(--muted);
+      max-width: 340px;
+      margin: 0 auto 20px;
+    }
+
+    /* ─── WHAT'S INSIDE ─── */
     #incluye {
-      padding: 48px 0;
-      background: var(--white);
+      padding: 40px 0;
       border-top: 1px solid var(--border);
     }
     #incluye h2 {
-      font-size: 1.35rem;
-      text-align: center;
-      margin-bottom: 6px;
+      font-size: 1.25rem;
+      margin-bottom: 4px;
     }
     #incluye .sub {
-      text-align: center;
-      font-size: .85rem;
+      font-size: .82rem;
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 22px;
     }
 
     .chapter-list {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      margin-bottom: 32px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 28px;
     }
     .chapter {
       display: flex;
       align-items: center;
       gap: 14px;
       padding: 14px 16px;
-      border-radius: 10px;
-      transition: background .15s;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
     }
-    .chapter:hover { background: var(--light); }
-    .ch-icon {
+    .chapter:last-child { border-bottom: none; }
+    .ch-ico {
+      font-size: 1.4rem;
       flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
+      width: 36px;
+      text-align: center;
     }
-    .ch-info h3 { font-size: .9rem; margin-bottom: 1px; }
-    .ch-info p  { font-size: .78rem; color: var(--muted); margin: 0; }
-    .ch-count {
+    .ch-info h3 { font-size: .88rem; margin-bottom: 1px; }
+    .ch-info p  { font-size: .74rem; color: var(--muted); margin: 0; }
+    .ch-n {
       margin-left: auto;
-      font-size: .75rem;
+      font-size: .74rem;
       font-weight: 600;
       color: var(--accent);
-      white-space: nowrap;
       flex-shrink: 0;
     }
 
-    /* ── TESTIMONIALS ── */
+    /* ─── TESTIMONIALS ─── */
     #testimonios {
-      padding: 48px 0;
+      padding: 40px 0;
       background: var(--light);
       border-top: 1px solid var(--border);
     }
-    #testimonios h2 {
-      font-size: 1.35rem;
-      text-align: center;
-      margin-bottom: 24px;
-    }
+    #testimonios h2 { font-size: 1.25rem; margin-bottom: 20px; }
 
-    .testi-grid { display: flex; flex-direction: column; gap: 14px; }
+    .tgrid { display: flex; flex-direction: column; gap: 12px; }
     .tcard {
-      background: var(--white);
+      background: #fff;
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 18px;
     }
-    .tcard-top {
+    .thead {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
+      gap: 10px;
+      margin-bottom: 10px;
     }
     .tav {
-      width: 40px; height: 40px;
+      width: 38px; height: 38px;
       border-radius: 50%;
       overflow: hidden;
       flex-shrink: 0;
       border: 2px solid var(--border);
     }
     .tav svg { display: block; }
-    .tname { font-family: 'Lora', serif; font-weight: 600; font-size: .87rem; color: var(--text); }
-    .tloc  { font-size: .72rem; color: var(--muted); }
-    .t-stars { color: var(--gold); font-size: .82rem; letter-spacing: .04em; margin-bottom: 8px; }
-    .t-body { font-size: .84rem; color: #444; font-style: italic; line-height: 1.65; }
+    .tname { font-family: 'Lora', serif; font-weight: 600; font-size: .85rem; }
+    .tloc  { font-size: .7rem; color: var(--muted); }
+    .tstars { color: var(--gold); font-size: .8rem; margin-bottom: 7px; }
+    .tbody  { font-size: .83rem; color: #444; font-style: italic; line-height: 1.6; }
 
-    /* ── FAQ ── */
+    /* ─── FAQ ─── */
     #faq {
-      padding: 48px 0;
-      background: var(--white);
+      padding: 40px 0;
       border-top: 1px solid var(--border);
     }
-    #faq h2 {
-      font-size: 1.35rem;
-      text-align: center;
-      margin-bottom: 28px;
-    }
+    #faq h2 { font-size: 1.25rem; margin-bottom: 24px; }
 
-    details {
-      border-bottom: 1px solid var(--border);
-    }
+    details { border-bottom: 1px solid var(--border); }
     details:first-of-type { border-top: 1px solid var(--border); }
     summary {
       font-family: 'Lora', serif;
       font-weight: 600;
-      font-size: .92rem;
-      color: var(--text);
-      padding: 16px 30px 16px 0;
+      font-size: .9rem;
+      padding: 15px 28px 15px 0;
       cursor: pointer;
       list-style: none;
       position: relative;
@@ -370,244 +373,250 @@
       transition: transform .2s;
     }
     details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
-    .fa { font-size: .86rem; color: #555; padding: 0 0 16px; line-height: 1.7; }
+    .fa { font-size: .84rem; color: #555; padding: 0 0 15px; line-height: 1.72; }
 
-    .faq-cta {
-      margin-top: 36px;
-      text-align: center;
-    }
+    .faq-cta { margin-top: 32px; }
 
-    /* ── FOOTER ── */
+    /* ─── FOOTER ─── */
     footer {
+      padding: 24px 18px;
       background: #111;
-      padding: 24px 20px;
       text-align: center;
     }
-    footer p {
-      font-size: .72rem;
-      color: rgba(255,255,255,.36);
-      line-height: 2;
-    }
-    footer a { color: rgba(255,255,255,.46); text-decoration: none; }
-
-    .footer-pay {
+    .foot-pay {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 6px 10px;
-      margin: 10px 0;
+      gap: 6px 8px;
+      margin-bottom: 12px;
     }
-    .footer-pay span {
+    .foot-pay span {
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.1);
-      border-radius: 5px;
-      padding: 3px 9px;
-      font-size: .66rem;
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: .63rem;
       font-weight: 700;
-      color: rgba(255,255,255,.38);
       letter-spacing: .07em;
       text-transform: uppercase;
+      color: rgba(255,255,255,.38);
     }
+    footer p { font-size: .7rem; color: rgba(255,255,255,.3); line-height: 2; }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; }
 
-    /* ── STICKY BAR (mobile) ── */
+    /* ─── STICKY PRICE BAR — always visible ─── */
     #sticky {
-      display: none;
       position: fixed;
       bottom: 0; left: 0; right: 0;
-      z-index: 200;
-      background: #111;
-      padding: 12px 20px 18px;
-      box-shadow: 0 -2px 16px rgba(0,0,0,.25);
-      transform: translateY(110%);
-      transition: transform .28s cubic-bezier(.4,0,.2,1);
+      z-index: 300;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(0,0,0,.1);
+      padding: 10px 18px 14px;
     }
-    #sticky.on { transform: translateY(0); }
     .sticky-inner {
       max-width: var(--w);
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 12px;
     }
-    .si-info strong { display: block; font-size: .9rem; color: #fff; font-weight: 600; }
-    .si-info span   { font-size: .7rem; color: rgba(255,255,255,.5); }
-    .si-btn {
+    .s-info { flex: 1; min-width: 0; }
+    .s-title {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: .85rem;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .s-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .s-old {
+      font-size: .78rem;
+      color: #bbb;
+      text-decoration: line-through;
+    }
+    .s-now {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .s-btn {
       flex-shrink: 0;
       background: var(--accent);
       color: #fff;
       font-family: 'Poppins', sans-serif;
-      font-size: .85rem;
+      font-size: .88rem;
       font-weight: 600;
       text-decoration: none;
-      padding: 11px 18px;
-      border-radius: 10px;
+      padding: 12px 20px;
+      border-radius: 9px;
       white-space: nowrap;
+      box-shadow: 0 3px 12px rgba(199,98,59,.3);
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 699px) {
-      #sticky { display: block; }
-      body { padding-bottom: 80px; }
-    }
-    @media (min-width: 700px) {
-      #sticky { display: none !important; }
-      body { padding-bottom: 0; }
-      .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    @media (min-width: 600px) {
+      .tgrid { display: grid; grid-template-columns: repeat(3,1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div id="topbar">
+<!-- ANNOUNCEMENT BAR -->
+<div id="bar">
   Entrega inmediata por email &nbsp;·&nbsp; Pago 100% seguro &nbsp;·&nbsp; Sin suscripción
 </div>
 
-<!-- PRODUCT SECTION -->
+<!-- HERO IMAGE — full width -->
+<div id="hero-img">
+  <img src="hf_20260724_145212_630b03ae-e21e-4b63-a272-be3952fbbd45.png"
+       alt="50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar" />
+</div>
+
+<!-- PRODUCT INFO -->
 <section id="product">
-
-    <!-- Hero image full-width -->
-    <div class="hero-img">
-      <img src="hf_20260724_145212_630b03ae-e21e-4b63-a272-be3952fbbd45.png"
-           alt="50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar" />
-    </div>
-
   <div class="wrap">
 
-    <!-- Book cover -->
-    <div class="book-img">
-      <img src="hf_20260724_145401_8d01ec3a-44ca-42c5-99d4-6642cae9f7cc.png"
-           alt="Recetario Sin Gluten" />
-    </div>
-
-    <!-- Rating -->
     <div class="rating-row">
       <span class="stars">★★★★★</span>
-      <span class="rating-text">4.9/5 basado en +500 valoraciones</span>
+      <span class="rating-text">4.9/5 &nbsp;·&nbsp; +500 familias ya lo tienen</span>
     </div>
 
-    <!-- Title -->
     <h1>50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar</h1>
 
-    <div class="divider" style="margin: 20px 0 24px;"></div>
+    <div class="tags">
+      <span class="tag">Listo en 15–20 min</span>
+      <span class="tag">Ingredientes de súper</span>
+      <span class="tag">Sin gluten oculto</span>
+      <span class="tag">Acceso de por vida</span>
+      <span class="tag">Entrega instantánea</span>
+    </div>
 
-    <!-- Feature bullets -->
-    <ul class="feature-list">
+    <div class="sep"></div>
+
+    <!-- Price -->
+    <div class="price-wrap">
+      <div class="price-row">
+        <span class="p-old">15,00 €</span>
+        <span class="p-now">7,00 €</span>
+      </div>
+      <div class="price-sub">Precio de lanzamiento · pago único · sin renovación automática</div>
+    </div>
+
+    <ul class="price-perks">
       <li>
-        <span class="f-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Listo en 15–20 min
+        <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        50 recetas testadas y comprobadas — descarga en PDF
       </li>
       <li>
-        <span class="f-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Ingredientes de cualquier supermercado
+        <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Acceso de por vida · pago único · sin suscripción
       </li>
       <li>
-        <span class="f-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Sin gluten oculto — cada receta revisada
-      </li>
-      <li>
-        <span class="f-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Acceso de por vida · pago único
-      </li>
-      <li>
-        <span class="f-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Entrega instantánea por email en PDF
+        <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Recibes el PDF al instante en tu correo
       </li>
     </ul>
 
-    <!-- Price -->
-    <div class="price-block">
-      <div class="price-inner">
-        <span class="p-old">15 €</span>
-        <span class="p-now">7 €</span>
-      </div>
-      <div class="price-note">Precio de lanzamiento · pago único · sin renovación</div>
-    </div>
+    <a href="https://hotmart.com" class="btn">Añadir al carrito — 7,00 €</a>
+    <p class="btn-note">Compra procesada de forma segura por Hotmart</p>
 
-    <!-- CTA -->
-    <a href="https://hotmart.com" class="btn-primary" id="hero-cta">Añadir al carrito — 7 €</a>
-    <p class="delivery-note">Recibes el PDF al instante en tu correo</p>
-
-    <!-- Payment -->
-    <div class="payment-row">
+    <div class="pay-row">
       <span class="pay-chip">Visa</span>
       <span class="pay-chip">Mastercard</span>
       <span class="pay-chip">PayPal</span>
       <span class="pay-chip">Bizum</span>
       <span class="pay-chip">Apple Pay</span>
+      <span class="pay-chip">Google Pay</span>
     </div>
 
-    <!-- Social proof bar -->
-    <div class="social-bar">
-      <div class="sp-item">
-        <div class="sp-n">+500</div>
-        <div class="sp-l">familias ya cocinan estas recetas</div>
+    <div class="proof-bar">
+      <div class="pb-item">
+        <div class="pb-n">+500</div>
+        <div class="pb-l">familias ya cocinan estas recetas</div>
       </div>
-      <div class="sp-item">
-        <div class="sp-n">50</div>
-        <div class="sp-l">recetas testadas y comprobadas</div>
+      <div class="pb-item">
+        <div class="pb-n">50</div>
+        <div class="pb-l">recetas testadas y comprobadas</div>
       </div>
-      <div class="sp-item">
-        <div class="sp-n">4.9★</div>
-        <div class="sp-l">valoración media de las familias</div>
+      <div class="pb-item">
+        <div class="pb-n">4.9★</div>
+        <div class="pb-l">valoración media</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- WHAT'S INCLUDED -->
+<!-- BOOK COVER -->
+<section id="book-section">
+  <div class="wrap">
+    <img src="hf_20260724_145401_8d01ec3a-44ca-42c5-99d4-6642cae9f7cc.png"
+         alt="Capa do recetario" />
+    <h2>El recetario sin gluten que sí funciona</h2>
+    <p>No es un libro de cocina gourmet. Son 50 recetas sencillas pensadas para el día a día real de una familia — del desayuno a la lonchera del cole.</p>
+    <a href="https://hotmart.com" class="btn" style="max-width:360px;">Quiero el recetario — 7,00 €</a>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
 <section id="incluye">
   <div class="wrap">
-    <h2>¿Qué incluye el recetario?</h2>
-    <p class="sub">50 recetas organizadas en 5 capítulos para cubrir toda la semana</p>
+    <h2>¿Qué incluye?</h2>
+    <p class="sub">50 recetas en 5 capítulos para cubrir toda la semana</p>
 
     <div class="chapter-list">
       <div class="chapter">
-        <div class="ch-icon" style="background:#fff3ec;">☀️</div>
+        <div class="ch-ico">☀️</div>
         <div class="ch-info">
           <h3>Desayunos</h3>
-          <p>Empezar el día con energía — sin drama</p>
+          <p>Empezar el día con energía, sin drama</p>
         </div>
-        <div class="ch-count">10 recetas</div>
+        <div class="ch-n">10 recetas</div>
       </div>
       <div class="chapter">
-        <div class="ch-icon" style="background:#fdf8ec;">🍪</div>
+        <div class="ch-ico">🍪</div>
         <div class="ch-info">
           <h3>Meriendas y Snacks</h3>
           <p>Sin hambre a media tarde</p>
         </div>
-        <div class="ch-count">10 recetas</div>
+        <div class="ch-n">10 recetas</div>
       </div>
       <div class="chapter">
-        <div class="ch-icon" style="background:#eef4ec;">🍽️</div>
+        <div class="ch-ico">🍽️</div>
         <div class="ch-info">
           <h3>Platos Principales</h3>
           <p>El menú de toda la semana</p>
         </div>
-        <div class="ch-count">15 recetas</div>
+        <div class="ch-n">15 recetas</div>
       </div>
       <div class="chapter">
-        <div class="ch-icon" style="background:#ecf1f7;">🎒</div>
+        <div class="ch-ico">🎒</div>
         <div class="ch-info">
           <h3>Fiambrera Escolar</h3>
           <p>Rico y seguro para el cole</p>
         </div>
-        <div class="ch-count">10 recetas</div>
+        <div class="ch-n">10 recetas</div>
       </div>
       <div class="chapter">
-        <div class="ch-icon" style="background:#f7ecf4;">🍰</div>
+        <div class="ch-ico">🍰</div>
         <div class="ch-info">
           <h3>Postres</h3>
           <p>El final feliz de cada comida</p>
         </div>
-        <div class="ch-count">5 recetas</div>
+        <div class="ch-n">5 recetas</div>
       </div>
     </div>
 
-    <a href="https://hotmart.com" class="btn-primary">Quiero las 50 recetas — 7 €</a>
-    <p class="delivery-note" style="margin-top:10px;">Descarga inmediata · Sin suscripción</p>
+    <a href="https://hotmart.com" class="btn">Quiero las 50 recetas — 7,00 €</a>
+    <p class="btn-note">Descarga inmediata · Sin suscripción</p>
   </div>
 </section>
 
@@ -615,20 +624,20 @@
 <section id="testimonios">
   <div class="wrap">
     <h2>Lo que dicen otras familias</h2>
-    <div class="testi-grid">
+    <div class="tgrid">
 
       <div class="tcard">
-        <div class="tcard-top">
+        <div class="thead">
           <div class="tav">
-            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" fill="#e8a878"/>
-              <path d="M4,23 Q5,3 20,3 Q35,3 36,23 Q31,8 20,8 Q9,8 4,23z" fill="#1e0e06"/>
-              <rect x="4" y="19" width="5" height="15" rx="2.5" fill="#1e0e06"/>
-              <rect x="31" y="19" width="5" height="15" rx="2.5" fill="#1e0e06"/>
-              <ellipse cx="20" cy="26" rx="10" ry="10" fill="#d4906a"/>
-              <circle cx="16" cy="25" r="1.5" fill="#1a0a04"/>
-              <circle cx="24" cy="25" r="1.5" fill="#1a0a04"/>
-              <path d="M16,30 Q20,33 24,30" fill="none" stroke="#b07040" stroke-width="1.3" stroke-linecap="round"/>
+            <svg width="38" height="38" viewBox="0 0 38 38">
+              <rect width="38" height="38" fill="#e8a878"/>
+              <path d="M3,22 Q4,2 19,2 Q34,2 35,22 Q30,7 19,7 Q8,7 3,22z" fill="#1e0e06"/>
+              <rect x="3" y="18" width="5" height="14" rx="2.5" fill="#1e0e06"/>
+              <rect x="30" y="18" width="5" height="14" rx="2.5" fill="#1e0e06"/>
+              <ellipse cx="19" cy="25" rx="9" ry="9" fill="#d4906a"/>
+              <circle cx="15" cy="24" r="1.4" fill="#1a0a04"/>
+              <circle cx="23" cy="24" r="1.4" fill="#1a0a04"/>
+              <path d="M15,29 Q19,32 23,29" fill="none" stroke="#b07040" stroke-width="1.2" stroke-linecap="round"/>
             </svg>
           </div>
           <div>
@@ -636,22 +645,22 @@
             <div class="tloc">Mamá de Álvaro, 8 años · Madrid</div>
           </div>
         </div>
-        <div class="t-stars">★★★★★</div>
-        <div class="t-body">"Llevaba meses buscando algo así. Desde que empezamos con estas recetas, las peleas en la mesa han desaparecido casi del todo. El bizcocho de la merienda lo pide él solo."</div>
+        <div class="tstars">★★★★★</div>
+        <div class="tbody">"Desde que empezamos con estas recetas, las peleas en la mesa han desaparecido casi del todo. El bizcocho de la merienda lo pide él solo."</div>
       </div>
 
       <div class="tcard">
-        <div class="tcard-top">
+        <div class="thead">
           <div class="tav">
-            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" fill="#f5c8a0"/>
-              <path d="M5,22 Q6,2 20,2 Q34,2 35,22 Q31,7 20,7 Q9,7 5,22z" fill="#7a4020"/>
-              <rect x="5" y="19" width="5" height="16" rx="2.5" fill="#7a4020"/>
-              <rect x="30" y="19" width="5" height="16" rx="2.5" fill="#7a4020"/>
-              <ellipse cx="20" cy="26" rx="10" ry="10" fill="#f0b888"/>
-              <circle cx="16" cy="25" r="1.5" fill="#3a1a08"/>
-              <circle cx="24" cy="25" r="1.5" fill="#3a1a08"/>
-              <path d="M16,30 Q20,33 24,30" fill="none" stroke="#c08858" stroke-width="1.3" stroke-linecap="round"/>
+            <svg width="38" height="38" viewBox="0 0 38 38">
+              <rect width="38" height="38" fill="#f5c8a0"/>
+              <path d="M4,21 Q5,1 19,1 Q33,1 34,21 Q30,6 19,6 Q8,6 4,21z" fill="#7a4020"/>
+              <rect x="4" y="18" width="4" height="14" rx="2" fill="#7a4020"/>
+              <rect x="30" y="18" width="4" height="14" rx="2" fill="#7a4020"/>
+              <ellipse cx="19" cy="25" rx="9" ry="9" fill="#f0b888"/>
+              <circle cx="15" cy="24" r="1.4" fill="#3a1a08"/>
+              <circle cx="23" cy="24" r="1.4" fill="#3a1a08"/>
+              <path d="M15,29 Q19,32 23,29" fill="none" stroke="#c08858" stroke-width="1.2" stroke-linecap="round"/>
             </svg>
           </div>
           <div>
@@ -659,22 +668,22 @@
             <div class="tloc">Mamá de Sofía, 6 años · Sevilla</div>
           </div>
         </div>
-        <div class="t-stars">★★★★★</div>
-        <div class="t-body">"Son recetas normales, no 'recetas raras'. Toda la familia come lo mismo y nadie nota la diferencia. La fiambrera de Sofía por fin tiene variedad."</div>
+        <div class="tstars">★★★★★</div>
+        <div class="tbody">"Son recetas normales, no recetas raras. Toda la familia come lo mismo y nadie nota la diferencia."</div>
       </div>
 
       <div class="tcard">
-        <div class="tcard-top">
+        <div class="thead">
           <div class="tav">
-            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" fill="#c8844a"/>
-              <ellipse cx="20" cy="10" rx="14" ry="9" fill="#180808"/>
-              <circle cx="7" cy="19" r="6" fill="#180808"/>
-              <circle cx="33" cy="19" r="6" fill="#180808"/>
-              <ellipse cx="20" cy="26" rx="10" ry="10" fill="#d48a54"/>
-              <circle cx="16" cy="25" r="1.5" fill="#0c0404"/>
-              <circle cx="24" cy="25" r="1.5" fill="#0c0404"/>
-              <path d="M16,30 Q20,33 24,30" fill="none" stroke="#a06830" stroke-width="1.3" stroke-linecap="round"/>
+            <svg width="38" height="38" viewBox="0 0 38 38">
+              <rect width="38" height="38" fill="#c8844a"/>
+              <ellipse cx="19" cy="9" rx="13" ry="8" fill="#180808"/>
+              <circle cx="6" cy="17" r="5" fill="#180808"/>
+              <circle cx="32" cy="17" r="5" fill="#180808"/>
+              <ellipse cx="19" cy="25" rx="9" ry="9" fill="#d48a54"/>
+              <circle cx="15" cy="24" r="1.4" fill="#0c0404"/>
+              <circle cx="23" cy="24" r="1.4" fill="#0c0404"/>
+              <path d="M15,29 Q19,32 23,29" fill="none" stroke="#a06830" stroke-width="1.2" stroke-linecap="round"/>
             </svg>
           </div>
           <div>
@@ -682,8 +691,8 @@
             <div class="tloc">Mamá de Pablo, 7 años · Barcelona</div>
           </div>
         </div>
-        <div class="t-stars">★★★★★</div>
-        <div class="t-body">"Mi hijo es muy selectivo, pero el truco anti-quejas de verdad que funciona. Llevamos 3 semanas y ha probado cosas que antes ni tocaba."</div>
+        <div class="tstars">★★★★★</div>
+        <div class="tbody">"Mi hijo es muy selectivo, pero el truco anti-quejas funciona. Lleva 3 semanas probando cosas que antes ni tocaba."</div>
       </div>
 
     </div>
@@ -696,49 +705,50 @@
     <h2>Lo más preguntado</h2>
 
     <details>
-      <summary>¿Sirve si mi hijo no es celíaco, solo tiene sensibilidad al gluten?</summary>
-      <p class="fa">Sí. Todas las recetas son 100% sin gluten y funcionan igual para celiaquía diagnosticada, sensibilidad al gluten, o si simplemente queréis reducir el gluten en casa.</p>
+      <summary>¿Sirve si mi hijo no es celíaco, solo tiene sensibilidad?</summary>
+      <p class="fa">Sí. Todas las recetas son 100% sin gluten y funcionan igual para celiaquía diagnosticada, sensibilidad, o si simplemente queréis reducir el gluten en casa.</p>
     </details>
     <details>
       <summary>¿Cómo recibo el PDF después de comprar?</summary>
-      <p class="fa">Nada más completar el pago, recibirás un correo automático de Hotmart con el enlace de descarga. El proceso tarda menos de 1 minuto.</p>
+      <p class="fa">Nada más completar el pago recibirás un email automático de Hotmart con el enlace de descarga. Tarda menos de 1 minuto.</p>
     </details>
     <details>
-      <summary>¿Necesito ingredientes raros o difíciles de encontrar?</summary>
-      <p class="fa">No. Todos los ingredientes se compran en cualquier supermercado. No hay nada importado ni de tienda especializada.</p>
+      <summary>¿Los ingredientes son fáciles de encontrar?</summary>
+      <p class="fa">Sí, todos los ingredientes se compran en cualquier supermercado. Nada de tiendas especializadas ni productos importados.</p>
     </details>
     <details>
-      <summary>¿Las recetas son solo para el niño o sirven para toda la familia?</summary>
+      <summary>¿Las recetas sirven para toda la familia?</summary>
       <p class="fa">Son recetas familiares — no hace falta cocinar aparte. Toda la familia come lo mismo y nadie nota la diferencia.</p>
     </details>
     <details>
       <summary>¿Cuánto tiempo lleva prepararlas?</summary>
-      <p class="fa">La mayoría están listas en 15–20 minutos. Están pensadas para el día a día real, no para cuando tienes toda la tarde libre.</p>
+      <p class="fa">La mayoría están listas en 15–20 minutos. Pensadas para el día a día real, no para cuando tienes toda la tarde libre.</p>
     </details>
     <details>
       <summary>¿Se puede imprimir?</summary>
-      <p class="fa">Sí, el PDF está optimizado para imprimirse o usarse desde el móvil o tablet mientras cocinas.</p>
+      <p class="fa">Sí. El PDF está optimizado para imprimirse o usarse desde el móvil o tablet mientras cocinas.</p>
     </details>
     <details>
-      <summary>¿Hay política de reembolso?</summary>
-      <p class="fa">Sí. Hotmart ofrece garantía de reembolso en los primeros 7 días. Si no estás satisfecha, contacta con soporte y te devolvemos el dinero sin preguntas.</p>
+      <summary>¿Hay garantía de reembolso?</summary>
+      <p class="fa">Sí. Hotmart ofrece garantía de reembolso en los primeros 7 días. Si no estás satisfecha, te devolvemos el dinero sin preguntas.</p>
     </details>
 
     <div class="faq-cta">
-      <a href="https://hotmart.com" class="btn-primary" style="max-width:360px;">Quiero el recetario — solo 7 €</a>
-      <p style="font-size:.74rem;color:var(--muted);margin-top:10px;">Descarga inmediata · Pago seguro · Sin suscripción</p>
+      <a href="https://hotmart.com" class="btn" style="max-width:360px;">Quiero el recetario — 7,00 €</a>
+      <p class="btn-note">Descarga inmediata · Pago seguro · Sin suscripción</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-pay">
+  <div class="foot-pay">
     <span>Visa</span>
     <span>Mastercard</span>
     <span>PayPal</span>
     <span>Bizum</span>
     <span>Apple Pay</span>
+    <span>Google Pay</span>
     <span>Hotmart</span>
   </div>
   <p>
@@ -747,30 +757,22 @@
     <a href="#">Reembolsos</a> &nbsp;·&nbsp;
     <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a>
   </p>
-  <p style="margin-top:6px;">© 2025 · Todos los derechos reservados · Distribuido por Hotmart</p>
+  <p style="margin-top:4px;">© 2025 · Distribuido por Hotmart · Todos los derechos reservados</p>
 </footer>
 
-<!-- STICKY MOBILE BAR -->
+<!-- STICKY PRICE BAR — always visible -->
 <div id="sticky">
   <div class="sticky-inner">
-    <div class="si-info">
-      <strong>50 Recetas Sin Gluten</strong>
-      <span>Descarga inmediata en PDF</span>
+    <div class="s-info">
+      <div class="s-title">50 Recetas Sin Gluten</div>
+      <div class="s-price">
+        <span class="s-old">15 €</span>
+        <span class="s-now">7,00 €</span>
+      </div>
     </div>
-    <a href="https://hotmart.com" class="si-btn">Comprar · 7 €</a>
+    <a href="https://hotmart.com" class="s-btn">Comprar ahora</a>
   </div>
 </div>
-
-<script>
-  (function () {
-    var bar = document.getElementById('sticky');
-    var anchor = document.getElementById('hero-cta');
-    if (!bar || !anchor || !window.IntersectionObserver) return;
-    new IntersectionObserver(function (entries) {
-      bar.classList.toggle('on', !entries[0].isIntersecting);
-    }, { threshold: 0 }).observe(anchor);
-  })();
-</script>
 
 </body>
 </html>
