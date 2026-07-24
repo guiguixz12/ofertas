@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar</title>
+  <meta name="description" content="50 recetas testadas y comprobadas para que tu hijo coma sin gluten sin drama. Desayunos, meriendas, comidas, lonchera y postres." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --t:  #C7623B;
+      --m:  #D9A441;
+      --s:  #7C8F6E;
+      --a:  #5E86A1;
+      --b:  #B5567A;
+      --cr: #FBF3E7;
+      --wh: #FFFDF9;
+      --dk: #3A2E27;
+      --md: #6B4F3E;
+      --br: #E5D5C2;
+      --w:  640px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--dk);
+      background: var(--cr);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.25; }
+
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 22px; }
+
+    section { padding: 52px 0; }
+
+    .eyebrow {
+      display: block;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--t);
+      margin-bottom: 10px;
+    }
+
+    .rule {
+      width: 36px; height: 3px;
+      border-radius: 2px;
+      background: var(--t);
+      margin: 0 auto 24px;
+    }
+
+    /* ── CTA ── */
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      background: var(--t);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(199,98,59,.34);
+      transition: background .18s, box-shadow .18s;
+      letter-spacing: .01em;
+    }
+    .btn:active { opacity: .9; }
+    @media (hover: hover) {
+      .btn:hover { background: #b0552f; box-shadow: 0 6px 24px rgba(199,98,59,.44); }
+    }
+
+    .btn-note {
+      text-align: center;
+      font-size: .74rem;
+      color: var(--md);
+      margin-top: 10px;
+    }
+
+    /* ═══════════════════════════════════
+       HERO — product-page style
+    ═══════════════════════════════════ */
+    #hero {
+      background: var(--wh);
+      padding: 36px 0 52px;
+      text-align: center;
+      border-top: 4px solid var(--t);
+    }
+
+    .proof-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff5ec;
+      border: 1px solid #f0d4bb;
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: .77rem;
+      font-weight: 500;
+      color: var(--md);
+      margin-bottom: 20px;
+    }
+    .proof-pill .stars { color: var(--m); letter-spacing: .06em; }
+
+    #hero h1 {
+      font-size: clamp(1.55rem, 5.5vw, 2.3rem);
+      color: var(--dk);
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    /* Feature tag pills */
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+      margin: 0 auto 28px;
+      max-width: 480px;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--cr);
+      border: 1px solid var(--br);
+      border-radius: 100px;
+      padding: 5px 12px;
+      font-size: .75rem;
+      font-weight: 500;
+      color: var(--md);
+    }
+    .hero-tag svg { width: 12px; height: 12px; flex-shrink: 0; fill: var(--t); }
+
+    /* Price block */
+    .hero-price {
+      background: var(--cr);
+      border: 2px solid var(--br);
+      border-radius: 18px;
+      padding: 18px 22px 16px;
+      max-width: 380px;
+      margin: 0 auto 22px;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .price-old {
+      font-size: 1.15rem;
+      color: #b0a090;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+    .price-now {
+      font-family: 'Lora', serif;
+      font-size: 2.9rem;
+      font-weight: 700;
+      color: var(--t);
+      line-height: 1;
+    }
+    .price-sub {
+      font-size: .74rem;
+      color: var(--md);
+    }
+
+    /* Payment badges */
+    .pay-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      margin-top: 14px;
+    }
+    .pay-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--cr);
+      border: 1px solid var(--br);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--md);
+      letter-spacing: .02em;
+    }
+
+    /* Decorative book */
+    .hero-book {
+      width: 140px; height: 190px;
+      border-radius: 4px 14px 14px 4px;
+      background: linear-gradient(150deg, var(--t) 0%, #9e4a27 100%);
+      box-shadow: -6px 6px 0 #7d3b1f, 3px 0 0 #d4714e, 8px 14px 30px rgba(0,0,0,.22);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 12px;
+      margin: 30px auto 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-book::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 8px;
+      background: rgba(0,0,0,.16);
+    }
+    .book-title {
+      font-family: 'Lora', serif;
+      font-size: .64rem;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      line-height: 1.4;
+      position: relative;
+      margin-bottom: 11px;
+    }
+    .book-strips { display: flex; gap: 4px; position: relative; }
+    .book-strip { width: 17px; height: 42px; border-radius: 3px; opacity: .85; }
+
+    .hero-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--s);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .hero-stamp svg { width: 11px; height: 11px; fill: #fff; flex-shrink: 0; }
+
+    /* ═══════════════════════════════════
+       TRUST STRIP
+    ═══════════════════════════════════ */
+    #trust {
+      background: #f0e8da;
+      padding: 18px 0;
+      border-top: 1px solid var(--br);
+      border-bottom: 1px solid var(--br);
+    }
+    .trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .77rem;
+      color: var(--md);
+      font-weight: 500;
+    }
+    .trust-item svg { width: 14px; height: 14px; fill: var(--s); flex-shrink: 0; }
+
+    /* ═══════════════════════════════════
+       PAIN POINTS
+    ═══════════════════════════════════ */
+    #problema { background: var(--cr); text-align: center; }
+
+    .pain-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 26px;
+      text-align: left;
+    }
+    .pain-item {
+      background: var(--wh);
+      border-left: 3px solid var(--t);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      font-size: .9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+    .pdot {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: #f5e0d6;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .pdot svg { width: 10px; height: 10px; fill: var(--t); }
+
+    /* ═══════════════════════════════════
+       QUÉ INCLUYE
+    ═══════════════════════════════════ */
+    #incluye { background: var(--wh); text-align: center; }
+
+    .recipe-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .rb {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .rb-ic {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .rb-ic svg { width: 20px; height: 20px; }
+    .rb h3 { font-size: .92rem; margin-bottom: 2px; }
+    .rb p  { font-size: .76rem; margin: 0; }
+
+    .rb-t { background: var(--t); }
+    .rb-t h3, .rb-t .rb-p { color: #fff; }
+    .rb-t .rb-p { color: rgba(255,255,255,.82); }
+
+    .rb-m { background: var(--m); }
+    .rb-m h3 { color: var(--dk); }
+    .rb-m .rb-p { color: var(--md); }
+    .rb-m .rb-ic { background: rgba(0,0,0,.1); }
+
+    .rb-s { background: var(--s); }
+    .rb-s h3, .rb-s .rb-p { color: #fff; }
+    .rb-s .rb-p { color: rgba(255,255,255,.82); }
+
+    .rb-a { background: var(--a); }
+    .rb-a h3, .rb-a .rb-p { color: #fff; }
+    .rb-a .rb-p { color: rgba(255,255,255,.82); }
+
+    .rb-b { background: var(--b); }
+    .rb-b h3, .rb-b .rb-p { color: #fff; }
+    .rb-b .rb-p { color: rgba(255,255,255,.82); }
+
+    /* ═══════════════════════════════════
+       ANTES / DESPUÉS
+    ═══════════════════════════════════ */
+    #antes-despues { background: var(--cr); text-align: center; }
+
+    .ad-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .ad-card { border-radius: 14px; padding: 20px 16px; text-align: left; }
+    .ad-antes  { background: #fdf0ea; border: 1.5px solid #e8c0aa; }
+    .ad-despues{ background: #eef3ea; border: 1.5px solid #bdd0b5; }
+
+    .ad-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 4px 11px;
+      margin-bottom: 13px;
+    }
+    .ad-antes  .ad-tag { background: #e8c0aa; color: #7a3b20; }
+    .ad-despues .ad-tag { background: #bdd0b5; color: #3b5e32; }
+
+    .ad-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .ad-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .87rem;
+      line-height: 1.45;
+    }
+    .ad-antes  .ad-list li { color: #7a3b20; }
+    .ad-despues .ad-list li { color: #3b5e32; }
+
+    .adot {
+      flex-shrink: 0;
+      width: 17px; height: 17px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 3px;
+    }
+    .ad-antes  .adot { background: #c9856a; }
+    .ad-despues .adot { background: #7aab6e; }
+    .adot svg { width: 9px; height: 9px; fill: #fff; }
+
+    .ad-divider { display: flex; justify-content: center; align-items: center; padding: 2px 0; }
+    .ad-divider svg { width: 30px; height: 30px; fill: var(--m); }
+
+    /* ═══════════════════════════════════
+       TESTIMONIALS
+    ═══════════════════════════════════ */
+    #testimonios { background: var(--wh); text-align: center; }
+
+    .testi-grid { display: flex; flex-direction: column; gap: 14px; }
+    .testi-card {
+      background: var(--wh);
+      border: 1px solid var(--br);
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: left;
+      box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    }
+    .testi-stars { color: var(--m); font-size: .88rem; letter-spacing: .05em; margin-bottom: 12px; }
+    .testi-head { display: flex; align-items: center; gap: 11px; margin-bottom: 11px; }
+    .tav {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid var(--br);
+    }
+    .tav svg { width: 42px; height: 42px; display: block; }
+    .tname { font-family: 'Lora', serif; font-weight: 600; font-size: .88rem; color: var(--dk); }
+    .trole { font-size: .73rem; color: var(--md); }
+    .tbody { font-size: .84rem; color: var(--md); font-style: italic; line-height: 1.65; }
+
+    /* ═══════════════════════════════════
+       AUTHORITY
+    ═══════════════════════════════════ */
+    #autoridad { background: var(--cr); text-align: center; }
+
+    .author-card {
+      background: var(--wh);
+      border: 1px solid var(--br);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: left;
+    }
+    .author-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .author-av {
+      flex-shrink: 0;
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--t) 0%, var(--m) 100%);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 3px var(--wh), 0 0 0 4.5px var(--t);
+    }
+    .av-ini { font-family: 'Lora', serif; font-weight: 700; font-size: 1.15rem; color: #fff; }
+    .aname  { font-family: 'Lora', serif; font-weight: 700; font-size: .98rem; color: var(--dk); margin-bottom: 2px; }
+    .arole  { font-size: .77rem; color: var(--t); font-weight: 600; }
+    .abio   { font-size: .88rem; color: var(--md); line-height: 1.7; margin-bottom: 12px; }
+    .author-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--br);
+    }
+    .astat { text-align: center; }
+    .astat-n { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: var(--t); line-height: 1; margin-bottom: 3px; }
+    .astat-l { font-size: .68rem; color: var(--md); line-height: 1.3; }
+
+    /* ═══════════════════════════════════
+       PRECIO
+    ═══════════════════════════════════ */
+    #precio { background: var(--wh); text-align: center; }
+
+    .price-box {
+      background: var(--cr);
+      border: 2px solid var(--br);
+      border-radius: 20px;
+      padding: 28px 22px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .price-box .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .price-box .price-old {
+      font-size: 1.15rem;
+      color: #b0a090;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+    .price-box .price-now {
+      font-family: 'Lora', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--t);
+      line-height: 1;
+    }
+    .price-label { font-size: .76rem; color: var(--md); margin-bottom: 22px; }
+
+    .incl-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    .incl-list li { display: flex; align-items: center; gap: 10px; font-size: .9rem; }
+    .ck {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--s);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ck svg { width: 9px; height: 9px; fill: #fff; }
+
+    /* ═══════════════════════════════════
+       FAQ
+    ═══════════════════════════════════ */
+    #faq { background: var(--cr); }
+    #faq h2 { text-align: center; margin-bottom: 30px; }
+
+    details { border-bottom: 1px solid var(--br); }
+    details:first-of-type { border-top: 1px solid var(--br); }
+    summary {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: .93rem;
+      color: var(--dk);
+      padding: 16px 32px 16px 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      position: absolute;
+      right: 0; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      color: var(--t);
+      font-weight: 300;
+      line-height: 1;
+      transition: transform .2s;
+    }
+    details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .fa { font-size: .87rem; color: var(--md); padding: 0 0 16px; line-height: 1.7; }
+
+    .faq-cta { margin-top: 38px; }
+
+    /* ═══════════════════════════════════
+       FINAL CTA
+    ═══════════════════════════════════ */
+    #final {
+      background: var(--dk);
+      text-align: center;
+      padding: 60px 0;
+    }
+    #final h2 { color: #fff; font-size: clamp(1.4rem, 4.5vw, 2rem); margin-bottom: 16px; }
+    .final-price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .final-price .price-old { font-size: 1rem; color: rgba(255,255,255,.38); text-decoration: line-through; font-weight: 500; }
+    .final-price .price-now { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 700; color: var(--m); line-height: 1; }
+    #final .btn { background: var(--m); color: var(--dk); box-shadow: 0 4px 16px rgba(217,164,65,.35); }
+    #final .btn-note { color: rgba(255,255,255,.42); }
+
+    /* ═══════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════ */
+    footer { background: #211910; padding: 22px 0; text-align: center; }
+    footer p { font-size: .73rem; color: rgba(255,255,255,.38); line-height: 2; }
+    footer a { color: rgba(255,255,255,.48); text-decoration: none; }
+
+    .pay-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      margin-top: 12px;
+    }
+    .pay-footer span {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-size: .67rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.44);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* ═══════════════════════════════════
+       STICKY MOBILE BAR
+    ═══════════════════════════════════ */
+    #sticky {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: var(--dk);
+      padding: 12px 20px 18px;
+      box-shadow: 0 -2px 16px rgba(0,0,0,.2);
+      transform: translateY(102%);
+      transition: transform .28s cubic-bezier(.4,0,.2,1);
+    }
+    #sticky.on { transform: translateY(0); }
+    .sticky-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      max-width: var(--w);
+      margin: 0 auto;
+    }
+    .sinfo strong { display: block; font-size: .9rem; color: #fff; font-weight: 600; }
+    .sinfo span   { font-size: .72rem; color: rgba(255,255,255,.55); }
+    .sbtn {
+      flex-shrink: 0;
+      background: var(--t);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    /* ═══════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════ */
+    @media (max-width: 699px) {
+      #sticky { display: block; }
+      body { padding-bottom: 80px; }
+      section { padding: 44px 0; }
+      #hero { padding: 30px 0 48px; }
+      #final { padding: 48px 0; }
+    }
+
+    @media (min-width: 540px) {
+      .recipe-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .rb:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+      .ad-wrap {
+        display: grid;
+        grid-template-columns: 1fr 28px 1fr;
+        align-items: center;
+      }
+      .ad-divider { padding: 0; }
+      .ad-divider svg { transform: none !important; }
+    }
+
+    @media (min-width: 700px) {
+      #sticky { display: none !important; }
+      body { padding-bottom: 0; }
+      .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════
+  HERO
+══════════════════════════ -->
+<section id="hero">
+  <div class="wrap">
+
+    <div class="proof-pill">
+      <span class="stars">★★★★★</span>
+      <span>4.9/5 &nbsp;·&nbsp; +500 familias ya cocinan estas recetas</span>
+    </div>
+
+    <h1>50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar</h1>
+
+    <div class="hero-tags">
+      <span class="hero-tag">
+        <svg viewBox="0 0 16 16"><path d="M8 1L2 4v4c0 3.31 2.58 6.41 6 7 3.42-.59 6-3.69 6-7V4L8 1z"/></svg>
+        Sin gluten oculto
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="var(--t)" stroke-width="1.4"/><path d="M8 5v3l2 2" fill="none" stroke="var(--t)" stroke-width="1.4" stroke-linecap="round"/></svg>
+        Listo en 15–20 min
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 16 16"><path d="M2 3h12v2H2zm1 3h10v8H3z" fill="var(--t)"/></svg>
+        Ingredientes de supermercado
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 16 16"><path d="M3 2h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm5 3v6M5 8h6" fill="none" stroke="var(--t)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        PDF · Descarga inmediata
+      </span>
+    </div>
+
+    <!-- Price block — visible from the start like a product page -->
+    <div class="hero-price">
+      <div class="price-row">
+        <span class="price-old">15 €</span>
+        <span class="price-now">7 €</span>
+      </div>
+      <div class="price-sub">Pago único &nbsp;·&nbsp; Sin suscripción &nbsp;·&nbsp; Tuyo para siempre</div>
+    </div>
+
+    <a href="https://hotmart.com" class="btn" id="hero-cta">Quiero las 50 recetas →</a>
+    <p class="btn-note">Descarga inmediata &nbsp;·&nbsp; Pago 100% seguro por Hotmart</p>
+
+    <div class="pay-row">
+      <span class="pay-badge">VISA</span>
+      <span class="pay-badge">Mastercard</span>
+      <span class="pay-badge">PayPal</span>
+      <span class="pay-badge">Bizum</span>
+      <span class="pay-badge">Hotmart</span>
+    </div>
+
+    <!-- Decorative book -->
+    <div class="hero-book" aria-hidden="true">
+      <div class="book-title">50 Recetas<br>Sin Gluten<br>que Tus Hijos<br>Comerán<br>Sin Rechistar</div>
+      <div class="book-strips">
+        <div class="book-strip" style="background:#D9A441;"></div>
+        <div class="book-strip" style="background:#7C8F6E;"></div>
+        <div class="book-strip" style="background:#5E86A1;"></div>
+        <div class="book-strip" style="background:#B5567A;"></div>
+      </div>
+    </div>
+
+    <span class="hero-stamp">
+      <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Testado y comprobado en familia
+    </span>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  TRUST STRIP
+══════════════════════════ -->
+<div id="trust">
+  <div class="wrap">
+    <div class="trust-row">
+      <span class="trust-item">
+        <svg viewBox="0 0 16 16"><path d="M8 1L2 4v4c0 3.31 2.58 6.41 6 7 3.42-.59 6-3.69 6-7V4L8 1z"/></svg>
+        Sin gluten oculto revisado
+      </span>
+      <span class="trust-item">
+        <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="var(--s)" stroke-width="1.4"/><path d="M5 8l2 2 4-4" fill="none" stroke="var(--s)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Probado en familia real
+      </span>
+      <span class="trust-item">
+        <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5" fill="none" stroke="var(--s)" stroke-width="1.3"/><path d="M1 7h14" stroke="var(--s)" stroke-width="1.3"/></svg>
+        Pago único · sin renovación
+      </span>
+      <span class="trust-item">
+        <svg viewBox="0 0 16 16"><path d="M8 1v14M1 8h14" fill="none" stroke="var(--s)" stroke-width="1.4" stroke-linecap="round"/></svg>
+        PDF · imprimible o en móvil
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+  PAIN POINTS
+══════════════════════════ -->
+<section id="problema">
+  <div class="wrap">
+    <span class="eyebrow">Lo sabes mejor que nadie</span>
+    <h2 style="text-align:center;margin-bottom:8px;">Cocinar sin gluten para niños es agotador</h2>
+    <div class="rule"></div>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <span class="pdot"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="2" x2="2" y2="8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        Siempre acabas cocinando las mismas 5 recetas porque no sabes qué más hacer
+      </div>
+      <div class="pain-item">
+        <span class="pdot"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="2" x2="2" y2="8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        Encuentras recetas sin gluten en internet… y tu hijo las rechaza directamente
+      </div>
+      <div class="pain-item">
+        <span class="pdot"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="2" x2="2" y2="8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        Te preocupa que en el cole no tenga nada rico que comer
+      </div>
+      <div class="pain-item">
+        <span class="pdot"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="2" x2="2" y2="8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        Revisar etiquetas todo el rato es agotador — el gluten oculto está en todas partes
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  QUÉ INCLUYE
+══════════════════════════ -->
+<section id="incluye">
+  <div class="wrap">
+    <span class="eyebrow">El contenido</span>
+    <h2 style="text-align:center;margin-bottom:6px;">Qué vas a encontrar dentro</h2>
+    <p style="text-align:center;color:var(--md);font-size:.88rem;margin-bottom:28px;">50 recetas organizadas en 5 capítulos</p>
+    <div class="rule"></div>
+
+    <div class="recipe-grid">
+      <div class="rb rb-t">
+        <div class="rb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+        <div><h3 style="color:#fff;">Desayunos</h3><p class="rb-p" style="color:rgba(255,255,255,.82);">10 recetas · Empezar el día con energía</p></div>
+      </div>
+      <div class="rb rb-m">
+        <div class="rb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--dk)" stroke-width="1.8" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <div><h3 style="color:var(--dk);">Meriendas y Snacks</h3><p class="rb-p" style="color:var(--md);">10 recetas · Sin hambre a media tarde</p></div>
+      </div>
+      <div class="rb rb-s">
+        <div class="rb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+        <div><h3 style="color:#fff;">Platos Principales</h3><p class="rb-p" style="color:rgba(255,255,255,.82);">15 recetas · El menú de toda la semana</p></div>
+      </div>
+      <div class="rb rb-a">
+        <div class="rb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div><h3 style="color:#fff;">Fiambrera Escolar</h3><p class="rb-p" style="color:rgba(255,255,255,.82);">10 recetas · Rico y seguro en el cole</p></div>
+      </div>
+      <div class="rb rb-b">
+        <div class="rb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M12 2c-1.5 3-5 4.5-5 8a5 5 0 0 0 10 0c0-3.5-3.5-5-5-8z"/><path d="M12 15v4M9 19h6"/></svg></div>
+        <div><h3 style="color:#fff;">Postres</h3><p class="rb-p" style="color:rgba(255,255,255,.82);">5 recetas · El final feliz de cada comida</p></div>
+      </div>
+    </div>
+
+    <a href="https://hotmart.com" class="btn">Quiero las 50 recetas — solo 7 €</a>
+    <p class="btn-note">Descarga inmediata &nbsp;·&nbsp; Sin suscripción</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  ANTES / DESPUÉS
+══════════════════════════ -->
+<section id="antes-despues">
+  <div class="wrap">
+    <span class="eyebrow" style="text-align:center;display:block;">La diferencia que notan desde el primer día</span>
+    <h2 style="text-align:center;margin-bottom:8px;">El mismo niño. Las recetas correctas.</h2>
+    <div class="rule"></div>
+
+    <div class="ad-wrap">
+      <div class="ad-card ad-antes">
+        <div class="ad-tag">Sin el recetario</div>
+        <ul class="ad-list">
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><line x1="2" y1="2" x2="7" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><line x1="7" y1="2" x2="2" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></span>Las mismas 5 recetas repetidas cada semana</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><line x1="2" y1="2" x2="7" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><line x1="7" y1="2" x2="2" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></span>Rechaza la comida en cuanto la ve diferente</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><line x1="2" y1="2" x2="7" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><line x1="7" y1="2" x2="2" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></span>Tensión y drama en cada comida</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><line x1="2" y1="2" x2="7" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><line x1="7" y1="2" x2="2" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></span>Fiambrera del cole: siempre la más triste</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><line x1="2" y1="2" x2="7" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><line x1="7" y1="2" x2="2" y2="7" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg></span>Sin postres ni caprichos ricos</li>
+        </ul>
+      </div>
+
+      <div class="ad-divider">
+        <svg viewBox="0 0 24 24" style="transform:rotate(90deg)"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z" fill="var(--m)"/></svg>
+      </div>
+
+      <div class="ad-card ad-despues">
+        <div class="ad-tag">Con el recetario</div>
+        <ul class="ad-list">
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Menú variado toda la semana, sin repetir</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Come sin drama — el truco anti-quejas funciona</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mesa tranquila — la comida deja de ser un campo de batalla</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Fiambrera que le da ganas de abrir en el cole</li>
+          <li><span class="adot"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Postres ricos y seguros — sin sentirse diferente</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  TESTIMONIOS
+══════════════════════════ -->
+<section id="testimonios">
+  <div class="wrap">
+    <span class="eyebrow" style="text-align:center;display:block;">Lo que dicen</span>
+    <h2 style="text-align:center;margin-bottom:8px;">Lo que dicen otras familias</h2>
+    <div class="rule"></div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-head">
+          <div class="tav">
+            <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+              <rect width="42" height="42" fill="#e8a878"/>
+              <path d="M4,24 Q5,3 21,3 Q37,3 38,24 Q33,8 21,8 Q9,8 4,24z" fill="#1e0e06"/>
+              <rect x="4" y="20" width="5" height="16" rx="2.5" fill="#1e0e06"/>
+              <rect x="33" y="20" width="5" height="16" rx="2.5" fill="#1e0e06"/>
+              <ellipse cx="21" cy="27" rx="10" ry="11" fill="#d4906a"/>
+              <circle cx="17" cy="26" r="1.6" fill="#1a0a04"/>
+              <circle cx="25" cy="26" r="1.6" fill="#1a0a04"/>
+              <path d="M14.5,22.5 Q17,21 19.5,22.5" fill="none" stroke="#1a0a04" stroke-width="1" stroke-linecap="round"/>
+              <path d="M22.5,22.5 Q25,21 27.5,22.5" fill="none" stroke="#1a0a04" stroke-width="1" stroke-linecap="round"/>
+              <path d="M17,31 Q21,34.5 25,31" fill="none" stroke="#b07040" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="tname">María González</div>
+            <div class="trole">Mamá de Álvaro, 8 años · Madrid</div>
+          </div>
+        </div>
+        <div class="tbody">"Llevaba meses buscando algo así. Desde que empezamos con estas recetas, las peleas en la mesa han desaparecido casi del todo. El bizcocho de la merienda es el favorito de Álvaro — lo pide él solo."</div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-head">
+          <div class="tav">
+            <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+              <rect width="42" height="42" fill="#f5c8a0"/>
+              <path d="M5,23 Q6,2 21,2 Q36,2 37,23 Q33,7 21,7 Q9,7 5,23z" fill="#7a4020"/>
+              <rect x="5" y="20" width="5" height="18" rx="2.5" fill="#7a4020"/>
+              <rect x="32" y="20" width="5" height="18" rx="2.5" fill="#7a4020"/>
+              <ellipse cx="21" cy="27" rx="10" ry="11" fill="#f0b888"/>
+              <circle cx="17" cy="26" r="1.6" fill="#3a1a08"/>
+              <circle cx="25" cy="26" r="1.6" fill="#3a1a08"/>
+              <path d="M14.5,22.5 Q17,21.2 19.5,22.5" fill="none" stroke="#5a2a10" stroke-width="1" stroke-linecap="round"/>
+              <path d="M22.5,22.5 Q25,21.2 27.5,22.5" fill="none" stroke="#5a2a10" stroke-width="1" stroke-linecap="round"/>
+              <path d="M17,31 Q21,34.5 25,31" fill="none" stroke="#c08858" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="tname">Carmen López</div>
+            <div class="trole">Mamá de Sofía, 6 años · Sevilla</div>
+          </div>
+        </div>
+        <div class="tbody">"Lo que más me gustó es que son recetas normales, no 'recetas raras'. Toda la familia come lo mismo y nadie nota la diferencia. La fiambrera de Sofía por fin tiene variedad."</div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-head">
+          <div class="tav">
+            <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+              <rect width="42" height="42" fill="#c8844a"/>
+              <ellipse cx="21" cy="10" rx="15" ry="10" fill="#180808"/>
+              <circle cx="7" cy="20" r="7" fill="#180808"/>
+              <circle cx="35" cy="20" r="7" fill="#180808"/>
+              <rect x="5" y="18" width="6" height="14" rx="3" fill="#180808"/>
+              <rect x="31" y="18" width="6" height="14" rx="3" fill="#180808"/>
+              <ellipse cx="21" cy="27" rx="10" ry="10" fill="#d48a54"/>
+              <circle cx="17" cy="26" r="1.6" fill="#0c0404"/>
+              <circle cx="25" cy="26" r="1.6" fill="#0c0404"/>
+              <path d="M14.5,22.5 Q17,21 19.5,22.5" fill="none" stroke="#180808" stroke-width="1.1" stroke-linecap="round"/>
+              <path d="M22.5,22.5 Q25,21 27.5,22.5" fill="none" stroke="#180808" stroke-width="1.1" stroke-linecap="round"/>
+              <path d="M17,31 Q21,34.5 25,31" fill="none" stroke="#a06830" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="tname">Ana Ruiz</div>
+            <div class="trole">Mamá de Pablo, 7 años · Barcelona</div>
+          </div>
+        </div>
+        <div class="tbody">"Sinceramente no esperaba que funcionara tan bien. Mi hijo es muy selectivo, pero el truco anti-quejas de verdad que funciona. Llevamos 3 semanas y ha probado cosas que antes ni tocaba."</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  AUTHORITY
+══════════════════════════ -->
+<section id="autoridad">
+  <div class="wrap">
+    <span class="eyebrow" style="text-align:center;display:block;">Quién está detrás</span>
+    <h2 style="text-align:center;margin-bottom:8px;">Un recetario testado y comprobado — no sacado de internet</h2>
+    <div class="rule"></div>
+
+    <div class="author-card">
+      <div class="author-head">
+        <div class="author-av"><span class="av-ini">LS</span></div>
+        <div>
+          <div class="aname">Laura Serrano</div>
+          <div class="arole">Mamá de niño celíaco · Creadora del recetario</div>
+        </div>
+      </div>
+      <p class="abio">Cuando a mi hijo Marcos le diagnosticaron celiaquía con 4 años, pensé que tendría que cocinar aparte para siempre. Durante meses probé recetas de internet que o no salían bien, o él rechazaba directamente. Llegué a tirar más comida de la que se comía.</p>
+      <p class="abio">Cansada de buscar y no encontrar nada que funcionase de verdad, empecé a crear mis propias recetas desde cero — con ingredientes normales, pasos sencillos, y pensando en que se las tenía que comer un niño de verdad.</p>
+      <p class="abio" style="margin-bottom:0;">Estas 50 recetas las he cocinado cientos de veces en casa. Todas están testadas y comprobadas en la mesa. Son las que funcionan.</p>
+      <div class="author-stats">
+        <div class="astat"><div class="astat-n">50</div><div class="astat-l">Recetas testadas y comprobadas</div></div>
+        <div class="astat"><div class="astat-n">+3</div><div class="astat-l">Años cocinando sin gluten en familia</div></div>
+        <div class="astat"><div class="astat-n">0</div><div class="astat-l">Ingredientes raros o difíciles</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  PRECIO
+══════════════════════════ -->
+<section id="precio">
+  <div class="wrap">
+    <span class="eyebrow" style="text-align:center;display:block;">La oferta</span>
+    <h2 style="text-align:center;margin-bottom:24px;">Todo esto por</h2>
+
+    <div class="price-box">
+      <div class="price-row">
+        <span class="price-old">15 €</span>
+        <span class="price-now">7 €</span>
+      </div>
+      <div class="price-label">Pago único &nbsp;·&nbsp; Sin suscripción &nbsp;·&nbsp; Tuyo para siempre</div>
+      <ul class="incl-list">
+        <li>
+          <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Las 50 recetas — PDF de descarga inmediata
+        </li>
+        <li>
+          <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Acceso para siempre, sin suscripción
+        </li>
+        <li>
+          <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Imprimible o disponible desde el móvil
+        </li>
+        <li>
+          <span class="ck"><svg viewBox="0 0 9 9" fill="none"><polyline points="1.5,4.5 3.5,7 7.5,2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Procesado de forma segura por Hotmart
+        </li>
+      </ul>
+      <a href="https://hotmart.com" class="btn">Quiero mis 50 recetas ahora →</a>
+      <p class="btn-note">Recibes el PDF al instante en tu correo</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  FAQ
+══════════════════════════ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow" style="text-align:center;display:block;">Lo más preguntado</span>
+    <h2>Preguntas frecuentes</h2>
+
+    <details>
+      <summary>¿Sirve si mi hijo no es celíaco, solo tiene sensibilidad al gluten?</summary>
+      <p class="fa">Sí, todas las recetas son sin gluten, así que funcionan igual para celiaquía diagnosticada, sensibilidad, o si simplemente estáis reduciendo el gluten en casa.</p>
+    </details>
+    <details>
+      <summary>¿Cómo recibo el PDF después de comprar?</summary>
+      <p class="fa">Nada más completar el pago, recibirás un correo con el enlace de descarga inmediato. El proceso lo gestiona Hotmart de forma segura.</p>
+    </details>
+    <details>
+      <summary>¿Puedo imprimirlo?</summary>
+      <p class="fa">Sí, el PDF está pensado para poder imprimirse o guardarse en el móvil, lo que te resulte más cómodo.</p>
+    </details>
+    <details>
+      <summary>¿Las recetas son solo para el niño o sirven para toda la familia?</summary>
+      <p class="fa">Son recetas familiares normales — no hace falta cocinar aparte para el resto de la casa. Toda la familia come lo mismo.</p>
+    </details>
+    <details>
+      <summary>¿Necesito ingredientes raros o difíciles de encontrar?</summary>
+      <p class="fa">No, todos los ingredientes se consiguen en cualquier supermercado. Nada de tiendas especializadas ni productos importados.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto tiempo llevan estas recetas?</summary>
+      <p class="fa">La mayoría se preparan en 15–20 minutos. Están diseñadas para familias con el día a día real, no para cocineros con tiempo libre.</p>
+    </details>
+    <details>
+      <summary>¿Puedo pedir un reembolso si no me gusta?</summary>
+      <p class="fa">Sí. Hotmart ofrece garantía de reembolso. Si no estás satisfecha, contacta con soporte en los primeros 7 días y te devolvemos el dinero sin preguntas.</p>
+    </details>
+
+    <div class="faq-cta">
+      <a href="https://hotmart.com" class="btn">Quiero las 50 recetas — solo 7 €</a>
+      <p class="btn-note">Descarga inmediata &nbsp;·&nbsp; Pago seguro &nbsp;·&nbsp; Sin suscripción</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  FINAL CTA
+══════════════════════════ -->
+<section id="final">
+  <div class="wrap">
+    <h2>Empieza esta semana<br>sin repetir menú</h2>
+    <div class="final-price">
+      <span class="price-old">15 €</span>
+      <span class="price-now">7 €</span>
+    </div>
+    <a href="https://hotmart.com" class="btn">Quiero las 50 recetas — solo 7 €</a>
+    <p class="btn-note">Descarga inmediata &nbsp;·&nbsp; Pago 100% seguro</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+  FOOTER
+══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <p>[Nombre de marca] &nbsp;·&nbsp; Compra procesada por Hotmart &nbsp;·&nbsp; <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a></p>
+    <div class="pay-footer">
+      <span>VISA</span>
+      <span>MASTERCARD</span>
+      <span>PAYPAL</span>
+      <span>BIZUM</span>
+      <span>HOTMART</span>
+    </div>
+    <p style="margin-top:10px;"><a href="#">Privacidad</a> &nbsp;·&nbsp; <a href="#">Aviso legal</a> &nbsp;·&nbsp; <a href="#">Política de reembolso</a></p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════
+  STICKY MOBILE BAR
+══════════════════════════ -->
+<div id="sticky">
+  <div class="sticky-row">
+    <div class="sinfo">
+      <strong>50 recetas sin gluten</strong>
+      <span>Descarga inmediata en PDF</span>
+    </div>
+    <a href="https://hotmart.com" class="sbtn">Comprar · 7 €</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var bar = document.getElementById('sticky');
+    var anchor = document.getElementById('hero-cta');
+    if (!bar || !anchor || !window.IntersectionObserver) return;
+    new IntersectionObserver(function (e) {
+      bar.classList.toggle('on', !e[0].isIntersecting);
+    }, { threshold: 0 }).observe(anchor);
+  })();
+</script>
+
+</body>
+</html>
