@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Reembolsos — 50 Recetas Sin Gluten</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent: #C7623B;
+      --text:   #1a1a1a;
+      --muted:  #6b6b6b;
+      --light:  #f5f5f5;
+      --border: #e4e4e4;
+      --green:  #3a7a52;
+      --green-bg: #edf6f1;
+      --green-border: #b8dfc9;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      line-height: 1.78;
+      color: var(--text);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.3; }
+
+    .legal-nav {
+      position: sticky; top: 0; z-index: 20;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 13px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .ln-brand {
+      font-family: 'Lora', serif;
+      font-size: .84rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .ln-back {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .ln-back:hover { text-decoration: underline; }
+
+    .legal-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 44px 20px 72px;
+    }
+    .last-update {
+      display: inline-block;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: .72rem;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .legal-wrap h1 {
+      font-size: clamp(1.55rem, 4.5vw, 2.1rem);
+      margin-bottom: 6px;
+    }
+    .legal-wrap .subtitle {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+    .legal-wrap h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 36px 0 10px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .legal-wrap p  { font-size: .9rem; margin-bottom: 13px; }
+    .legal-wrap ol { padding-left: 20px; margin-bottom: 14px; }
+    .legal-wrap li { font-size: .9rem; margin-bottom: 8px; }
+    .legal-wrap a  { color: var(--accent); }
+    .legal-wrap strong { font-weight: 600; }
+
+    .guarantee-box {
+      background: var(--green-bg);
+      border: 1.5px solid var(--green-border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 16px 0 24px;
+    }
+    .guarantee-box .g-title {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .guarantee-box p { font-size: .9rem; color: #2d5e40; margin-bottom: 0; }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 20px;
+    }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      font-size: .9rem;
+    }
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .notice-box {
+      background: #fff8f5;
+      border: 1px solid #f0cdb8;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin: 14px 0 20px;
+      font-size: .87rem;
+      color: #5a3020;
+    }
+    .notice-box strong { color: var(--accent); }
+
+    footer {
+      background: #111;
+      padding: 22px 18px;
+      text-align: center;
+    }
+    .foot-pay {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px 8px;
+      margin-bottom: 10px;
+    }
+    .foot-pay span {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.36);
+    }
+    footer p { font-size: .69rem; color: rgba(255,255,255,.28); line-height: 2; }
+    footer a { color: rgba(255,255,255,.38); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<nav class="legal-nav">
+  <a href="/" class="ln-brand">50 Recetas Sin Gluten</a>
+  <a href="/" class="ln-back">← Volver</a>
+</nav>
+
+<div class="legal-wrap">
+
+  <span class="last-update">Última actualización: 24 de julio de 2026</span>
+
+  <h1>Política de Reembolsos</h1>
+  <p class="subtitle">La satisfacción del cliente es nuestra prioridad. A continuación se detallan las condiciones de devolución aplicables al producto digital «50 Recetas Sin Gluten que Tus Hijos Comerán Sin Rechistar».</p>
+
+  <h2>1. Garantía de satisfacción de 7 días</h2>
+
+  <div class="guarantee-box">
+    <div class="g-title">✓ Garantía de devolución de 7 días</div>
+    <p>Si por cualquier motivo el Recetario no cumple sus expectativas, dispone de <strong>7 días naturales</strong> desde la fecha de compra para solicitar el reembolso íntegro del importe abonado, sin necesidad de justificación y sin coste adicional alguno.</p>
+  </div>
+
+  <p>Esta garantía se ofrece de forma voluntaria, con independencia y en adición al derecho de desistimiento legal regulado en la sección 3 de este documento.</p>
+
+  <h2>2. Cómo solicitar el reembolso</h2>
+  <p>El reembolso se gestiona íntegramente a través de la plataforma <strong>Hotmart</strong>. El procedimiento es el siguiente:</p>
+
+  <ol class="steps">
+    <li>Acceda a su cuenta en <a href="https://app-vlc.hotmart.com/inicio" target="_blank" rel="noopener">app.hotmart.com</a> con el correo electrónico con el que realizó la compra.</li>
+    <li>Diríjase a la sección <strong>«Mis compras»</strong> y localice el producto «50 Recetas Sin Gluten».</li>
+    <li>Haga clic en <strong>«Solicitar reembolso»</strong> o contacte con el soporte de Hotmart desde el mismo panel.</li>
+    <li>Hotmart verificará que la solicitud se encuentra dentro del plazo de garantía y procederá a tramitar la devolución.</li>
+  </ol>
+
+  <p>Si tiene dificultades para localizar la opción de reembolso en Hotmart, también puede contactar directamente con nosotros en <a href="mailto:[EMAIL]">[EMAIL]</a> indicando en el asunto <strong>«Solicitud de reembolso»</strong> y el número de pedido de Hotmart. Le asistiremos en la gestión.</p>
+
+  <h2>3. Plazo de devolución del importe</h2>
+  <p>Una vez aprobada la solicitud por Hotmart, el importe será devuelto a través del mismo método de pago utilizado en la compra. Los plazos habituales son:</p>
+  <ul style="list-style:disc;padding-left:20px;margin-bottom:14px;">
+    <li>Tarjeta de crédito o débito: <strong>5 a 10 días hábiles</strong>.</li>
+    <li>PayPal: <strong>3 a 5 días hábiles</strong>.</li>
+    <li>Bizum: <strong>hasta 5 días hábiles</strong>.</li>
+  </ul>
+  <p>Estos plazos son orientativos y pueden variar en función de la entidad bancaria o el proveedor de pagos del usuario. El titular no controla los plazos internos de procesamiento de Hotmart ni de las entidades financieras.</p>
+
+  <h2>4. Derecho de desistimiento y renuncia expresa</h2>
+  <p>Conforme al <strong>artículo 103.m) del Real Decreto Legislativo 1/2007, de 16 de noviembre, por el que se aprueba el Texto Refundido de la Ley General para la Defensa de los Consumidores y Usuarios</strong>, el derecho de desistimiento de 14 días <strong>no será aplicable</strong> a los contratos de suministro de contenido digital que no se preste en un soporte material cuando:</p>
+  <ul>
+    <li>La ejecución haya comenzado con el previo consentimiento expreso del consumidor.</li>
+    <li>El consumidor haya reconocido que pierde su derecho de desistimiento una vez se haya iniciado la ejecución del contrato.</li>
+  </ul>
+
+  <div class="notice-box">
+    <strong>Aviso importante:</strong> Al completar la compra y proceder a la descarga inmediata del archivo PDF, el comprador reconoce expresamente haber prestado su consentimiento para la entrega inmediata del contenido digital y declara ser consciente de que, una vez iniciada la descarga, <strong>renuncia a su derecho de desistimiento de 14 días</strong> previsto en la normativa de consumo. Esta renuncia no afecta a la garantía voluntaria de 7 días ofrecida en la sección 1 de este documento.
+  </div>
+
+  <p>En todo caso, la garantía voluntaria de 7 días descrita en la sección 1 proporciona al comprador una protección superior a la exigida legalmente, permitiéndole solicitar el reembolso incluso tras haber descargado y consultado el contenido.</p>
+
+  <h2>5. Contacto</h2>
+  <p>Para cualquier consulta relacionada con esta política, puede contactar con nosotros en:</p>
+  <p><strong>Correo electrónico:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></p>
+  <p>Respondemos a todas las solicitudes en un plazo máximo de <strong>48 horas hábiles</strong>.</p>
+
+</div>
+
+<footer>
+  <div class="foot-pay">
+    <span>Visa</span><span>Mastercard</span><span>PayPal</span>
+    <span>Bizum</span><span>Apple Pay</span><span>Google Pay</span><span>Hotmart</span>
+  </div>
+  <p>
+    <a href="/politica-de-privacidad">Política de privacidad</a> &nbsp;·&nbsp;
+    <a href="/aviso-legal">Aviso legal</a> &nbsp;·&nbsp;
+    <a href="/politica-de-reembolsos">Reembolsos</a> &nbsp;·&nbsp;
+    <a href="mailto:[EMAIL]">[EMAIL]</a>
+  </p>
+  <p style="margin-top:6px;font-size:.66rem;color:rgba(255,255,255,.22);max-width:560px;margin-left:auto;margin-right:auto;">
+    Este recetario tiene fines informativos y no sustituye el consejo de un profesional sanitario. Consulte siempre con su médico o dietista-nutricionista ante cualquier condición como la celiaquía.
+  </p>
+  <p style="margin-top:6px;">© 2026 · Distribuido por Hotmart · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
